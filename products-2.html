@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Products</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+    <body>
+        <script>
+            window.onload = () => {
+                if ($("button").click()) {
+                    let data = $.get("products.json");
+                    //let parsedData = JSON.parse(data);
+                    console.log(data);
+                }
+            }
+        </script>
+
+        <button type="button">Click Me!</button>
+
+        <div id="result"></div>
+    </body>
+
+</html>

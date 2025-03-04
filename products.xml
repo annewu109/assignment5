@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="xml-style.css"?>
+
+<products>
+    <product>
+        <name>Vintage T-Shirt</name>
+        <description>Tie-die Grateful Dead T-shirt</description>
+        <price>$35</price>
+        <category>clothing</category>
+        <category>vintage</category>
+    </product>
+    <product>
+        <name>Rubik's Cube</name>
+        <description>A 3x3 Rubik's Cube, great for puzzle lovers!</description>
+        <price>$10</price>
+        <category>toy</category>
+    </product>
+    <product>
+        <name>Cashmere Sweater</name>
+        <description>A beige medium cashmere sweater</description>
+        <price>$50</price>
+        <category>clothing</category>
+        <category>comfort</category>
+    </product>
+    <product>
+        <name>Noise Cancelling Headphones</name>
+        <description>Wireless Blue Noise Cancelling Headphones</description>
+        <price>$350</price>
+        <category>accessories</category>
+        <category>technology</category>
+    </product>
+    <product>
+        <name>iPad</name>
+        <description>Apple's classic tablet computer</description>
+        <price>$349</price>
+        <category>computer</category>
+        <category>technology</category>
+    </product>
+    <product>
+        <name>Sunglasses</name>
+        <description>camo-pattern polarized sunglasses</description>
+        <price>$24</price>
+        <category>accessories</category>
+    </product>
+    <product>
+        <name>Trash Bags</name>
+        <description>100 clean-scented trash bags</description>
+        <price>$18.61</price>
+        <category>disposible</category>
+    </product>
+    <product>
+        <name>Tennis Balls</name>
+        <description>A can of 3 tennis balls</description>
+        <price>$4</price>
+        <category>sports</category>
+    </product>
+</products>

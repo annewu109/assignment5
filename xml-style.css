@@ -1,0 +1,27 @@
+products {
+    margin: auto;
+    width: 50%;
+}
+product {
+    display:inline-block;
+    background-color: darkseagreen;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+    padding: 10px 0;
+}
+name, description, price{
+    display: block;
+    padding: 3px 0;
+}
+name {
+    font-size: x-large;
+}
+description, price {
+    font-size: medium;
+}
+category {
+    font-size: small;
+    padding: 0 5px;
+    display: inline;
+}
