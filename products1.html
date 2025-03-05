@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Products</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script>
+        var jsonProducts = [
+            {
+                "name": "Vintage T-Shirt",
+                "description": "Tie-die Grateful Dead T-shirt",
+                "price": "$35",
+                "category": [
+                    "clothing",
+                    "vintage"
+                ]
+            },
+            {
+                "name": "Rubik's Cub",
+                "description": "A 3x3 Rubik's Cube, great for puzzle lovers!",
+                "price": "$10",
+                "category": [
+                    "toy"
+                ]
+            },
+            {
+                "name": "Cashmere Sweater",
+                "description": "A beige medium cashmere sweater",
+                "price": "$50",
+                "category": [
+                    "clothing",
+                    "comfort"
+                ]
+            },
+            {
+                "name": "Noise Cancelling Headphones",
+                "description": "Wireless Blue Noise Cancelling Headphones",
+                "price": "$350",
+                "category": [
+                    "accessories",
+                    "technology"
+                ]
+            },
+            {
+                "name": "iPad",
+                "description": "Apple's classic tablet computer",
+                "price": "$349",
+                "category": [
+                    "technology",
+                    "computer"
+                ]
+            },
+            {
+                "name": "Sunglasses",
+                "description": "camo-pattern polarized sunglasses",
+                "price": "$24",
+                "category": [
+                    "accessories"
+                ]
+            },
+            {
+                "name": "Trash Bags",
+                "description": "100 clean-scented trash bags",
+                "price": "$18.61",
+                "category": [
+                    "disposible"
+                ]
+            },
+            {
+                "name": "Tennis Balls",
+                "description": "A can of 3 tennis balls",
+                "price": "$4",
+                "category": [
+                    "sports"
+                ]
+            }
+        ]
+        
+        document.write(JSON.stringify(jsonProducts));
+        
+    </script>
+</body>
+
+</html>
