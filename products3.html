@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Products</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        #result {
+            margin: auto;
+            width: 50%;
+        }
+        .product {
+            display:inline-block;
+            background-color: darkseagreen;
+            width: 100%;
+            text-align: center;
+            margin: 5px;
+            padding: 10px 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+    <body>
+        <script>
+            window.onload = () => {
+                //get all unique categories from products
+                $.get("https://annewu109.github.io/assignment5/products.json", (data) => {
+                    let allProducts = data.products;
+                    let allCategories = new Set(); //used a set to handle duplicates
+                    allProducts.forEach((product, index1) => {
+                        product.category.forEach((ctgy) => {
+                            allCategories.add(ctgy);
+                        })
+                    });
+
+                    allCategories.forEach(ctgy => {
+                        $("select").append("<option value='" + ctgy + "'>" + ctgy + "</option>");
+                    });
+                });
+                
+
+                //gets products based on chosen filter category
+                $("button").on("click", () => {
+                    //makes sure that old contents of div are cleared
+                    $("#result").empty()
+
+                    $.get("https://annewu109.github.io/assignment5/products.json", (data) => {
+                        let allProducts = data.products;
+                        allProducts.forEach((element, index) => {
+                            //ensures that only products with selected category are displayed
+                            if (element.category.includes($("select").val())) {
+                                $("#result").append("<div class='product' id='p" + index + "'></div>");
+                                $("#p" + index).append("<h2>" + element.name + "</h2>");
+                                $("#p" + index).append("<p>" + element.description + "</p>");
+                                $("#p" + index).append("<p> Price: " + element.price + "</p>");
+
+                                let categoryString = element.category.join(", ");
+                                $("#p" + index).append("<p> Categories: " + categoryString + "</p>");
+                            }
+                        });
+                    });
+                }
+                );
+            }
+        </script>
+
+        <select name="categories"></select>
+        <button type="button">Filter</button>
+
+
+        <div id="result"></div>
+    </body>
+
+</html>
